@@ -1,7 +1,9 @@
+import Checker from "./checker";
+
 export default function Home() {
   return (
-    <main>
-      <div>Hello world!</div>
+    <main className="min-h-screen bg-slate-50">
+      <Checker />
     </main>
   );
 }

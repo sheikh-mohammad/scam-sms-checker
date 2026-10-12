@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { ConfigError, TimeoutError, analyzeMessage } from "@/lib/analyze";
 import { MAX_MESSAGE_LENGTH, type CheckResponse } from "@/lib/types";
 
-export const runtime = "nodejs";
 export const maxDuration = 30;
 
 export async function POST(request: Request): Promise<NextResponse<CheckResponse>> {
