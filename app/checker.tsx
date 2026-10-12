@@ -12,6 +12,140 @@ import {
 
 type Lang = "ur" | "en";
 
+interface IconProps {
+  className?: string;
+}
+
+function ShieldCheck({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M12 3l7 3v5.2c0 4.4-2.9 8-7 9.3-4.1-1.3-7-4.9-7-9.3V6l7-3z" />
+      <path d="M9 12l2 2 4-4" />
+    </svg>
+  );
+}
+
+function AlertTriangle({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M10.3 4.3 2.6 18a1.6 1.6 0 0 0 1.4 2.4h16a1.6 1.6 0 0 0 1.4-2.4L13.7 4.3a1.6 1.6 0 0 0-2.8 0Z" />
+      <path d="M12 9.5v4" />
+      <path d="M12 17h.01" />
+    </svg>
+  );
+}
+
+function VolumeIcon({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M11 5 6 9H3v6h3l5 4V5z" />
+      <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+      <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+    </svg>
+  );
+}
+
+function StopIcon({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="6" y="6" width="12" height="12" rx="2.5" />
+    </svg>
+  );
+}
+
+function WhatsAppIcon({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.98 2.9a9.83 9.83 0 0 1 2.9 6.99c0 5.45-4.44 9.89-9.89 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.54 4.14 1.58 5.95L.05 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41" />
+    </svg>
+  );
+}
+
+function LockIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.9}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="4" y="10" width="16" height="10" rx="2.5" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+    </svg>
+  );
+}
+
+function SearchIcon({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3.2-3.2" />
+    </svg>
+  );
+}
+
+function Spinner({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={`${className} animate-spin`} aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="3" opacity="0.25" />
+      <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function VerdictIcon({ verdict, className }: { verdict: Verdict; className?: string }) {
+  return verdict === "LOOKS SAFE" ? (
+    <ShieldCheck className={className} />
+  ) : (
+    <AlertTriangle className={className} />
+  );
+}
+
 const VERDICT_META: Record<
   Verdict,
   {
@@ -22,26 +156,26 @@ const VERDICT_META: Record<
 > = {
   SCAM: {
     label: { ur: "Yeh pakka scam hai", en: "This is a scam" },
-    header: "bg-red-600 text-white",
-    flag: "bg-red-100 text-red-800",
+    header: "vh-scam",
+    flag: "bg-rose-50 text-rose-900 ring-1 ring-rose-100",
   },
   "PROBABLY SCAM": {
     label: { ur: "Yeh shayad scam hai", en: "This is probably a scam" },
-    header: "bg-orange-500 text-white",
-    flag: "bg-orange-100 text-orange-900",
+    header: "vh-probably",
+    flag: "bg-amber-50 text-amber-900 ring-1 ring-amber-100",
   },
   "LOOKS SAFE": {
     label: { ur: "Scam ki koi nishani nahi mili", en: "No scam signs found" },
-    header: "bg-green-600 text-white",
-    flag: "bg-green-100 text-green-800",
+    header: "vh-safe",
+    flag: "bg-emerald-50 text-emerald-900 ring-1 ring-emerald-100",
   },
 };
 
 const UI: Record<Lang, Record<string, string>> = {
   ur: {
     appName: "Scam SMS Checker",
+    eyebrow: "Pakistani families ke liye",
     tagline: "Message paste karein — hum batayenge scam hai ya nahi.",
-    toggleTo: "English",
     boxLabel: "SMS ya WhatsApp message yahan paste karein",
     placeholder:
       "Misal: Mubarak ho! BISP ki taraf se aap ne Rs 25,00,000 ka inaam jeeta hai. Apna CNIC aur code bhejein...",
@@ -51,7 +185,6 @@ const UI: Record<Lang, Record<string, string>> = {
     listen: "Sunnain",
     stop: "Rok dein",
     warn: "Family group ko warn karein",
-    another: "Doosra message check karein",
     resultTitle: "Natija",
     flagsTitle: "Khatarnak nishaniyan (red flags)",
     noFlags: "Koi khaas khatarnak nishani nahi mili.",
@@ -67,8 +200,8 @@ const UI: Record<Lang, Record<string, string>> = {
   },
   en: {
     appName: "Scam SMS Checker",
+    eyebrow: "For Pakistani families",
     tagline: "Paste a message — we'll tell you if it's a scam.",
-    toggleTo: "اردو",
     boxLabel: "Paste the SMS or WhatsApp message here",
     placeholder:
       "Example: Mubarak ho! BISP ki taraf se aap ne Rs 25,00,000 ka inaam jeeta hai. Apna CNIC aur code bhejein...",
@@ -78,7 +211,6 @@ const UI: Record<Lang, Record<string, string>> = {
     listen: "Listen",
     stop: "Stop",
     warn: "Warn the family group",
-    another: "Check another message",
     resultTitle: "Result",
     flagsTitle: "Red flags",
     noFlags: "No specific red flags were found.",
@@ -268,26 +400,53 @@ export default function Checker() {
   const meta = result ? VERDICT_META[result.verdict] : null;
 
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-xl flex-col gap-5 px-4 py-6 text-lg">
-      <header className="flex items-center justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-extrabold leading-tight">
-            {t(lang, "appName")}
-          </h1>
-          <p className="mt-1 text-base text-slate-600">{t(lang, "tagline")}</p>
+    <div className="mx-auto flex min-h-screen w-full max-w-xl flex-col gap-6 px-4 pb-10 pt-6 text-lg text-slate-800">
+      <header className="flex items-start justify-between gap-3">
+        <div className="flex items-start gap-3">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white shadow-lg shadow-emerald-500/20">
+            <ShieldCheck className="h-6 w-6" />
+          </span>
+          <div>
+            <h1 className="text-xl font-extrabold leading-tight tracking-tight text-slate-900">
+              {t(lang, "appName")}
+            </h1>
+            <p className="text-xs font-medium uppercase tracking-[0.14em] text-emerald-700">
+              {t(lang, "eyebrow")}
+            </p>
+          </div>
         </div>
-        <button
-          type="button"
-          onClick={() => setLang(lang === "ur" ? "en" : "ur")}
-          aria-label="Switch language / زبان بدلیں"
-          className="shrink-0 rounded-full border-2 border-slate-900 bg-white px-4 py-2 text-base font-bold text-slate-900 active:bg-slate-900 active:text-white"
+
+        <div
+          role="group"
+          aria-label="Language"
+          className="flex shrink-0 items-center rounded-full bg-slate-200/70 p-1"
         >
-          {t(lang, "toggleTo")}
-        </button>
+          {(["ur", "en"] as const).map((code) => (
+            <button
+              key={code}
+              type="button"
+              onClick={() => setLang(code)}
+              aria-pressed={lang === code}
+              className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${
+                lang === code
+                  ? "bg-white text-slate-900 shadow-sm"
+                  : "text-slate-500 hover:text-slate-700"
+              }`}
+            >
+              {code === "ur" ? "اردو" : "English"}
+            </button>
+          ))}
+        </div>
       </header>
 
-      <section className="rounded-2xl border-2 border-slate-200 bg-white p-4 shadow-sm">
-        <label htmlFor="message" className="mb-2 block text-base font-semibold text-slate-700">
+      <p className="-mt-2 text-base text-slate-500">{t(lang, "tagline")}</p>
+
+      <section className="rounded-3xl border border-slate-900/5 bg-white/80 p-4 shadow-[0_10px_40px_-12px_rgba(15,23,42,0.15)] backdrop-blur">
+        <label
+          htmlFor="message"
+          className="mb-2 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500"
+        >
+          <ShieldCheck className="h-4 w-4 text-slate-400" />
           {t(lang, "boxLabel")}
         </label>
         <textarea
@@ -297,22 +456,32 @@ export default function Checker() {
           placeholder={t(lang, "placeholder")}
           maxLength={MAX_MESSAGE_LENGTH}
           rows={5}
-          className="w-full resize-y rounded-xl border-2 border-slate-300 p-3 text-lg leading-relaxed outline-none focus:border-slate-900"
+          className="w-full resize-y rounded-2xl border border-slate-200 bg-slate-50/80 p-4 text-lg leading-relaxed text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-emerald-400 focus:bg-white focus:ring-4 focus:ring-emerald-500/10"
         />
-        <div className="mt-3 flex gap-3">
+        <div className="mt-3 flex items-center gap-3">
           <button
             type="button"
             onClick={onCheck}
             disabled={loading}
-            className="flex-1 rounded-xl bg-slate-900 px-5 py-4 text-xl font-extrabold text-white disabled:opacity-60"
+            className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900 px-5 py-4 text-lg font-bold text-white shadow-lg shadow-slate-900/20 transition hover:from-slate-700 hover:to-slate-900 active:scale-[0.99] disabled:opacity-60"
           >
-            {loading ? t(lang, "checking") : t(lang, "check")}
+            {loading ? (
+              <>
+                <Spinner className="h-5 w-5" />
+                {t(lang, "checking")}
+              </>
+            ) : (
+              <>
+                <SearchIcon className="h-5 w-5" />
+                {t(lang, "check")}
+              </>
+            )}
           </button>
           {(message || result) && (
             <button
               type="button"
               onClick={onClear}
-              className="rounded-xl border-2 border-slate-300 px-4 py-4 text-lg font-bold text-slate-700"
+              className="rounded-2xl px-4 py-4 text-base font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-slate-700"
             >
               {t(lang, "clear")}
             </button>
@@ -323,87 +492,104 @@ export default function Checker() {
       {error && (
         <div
           role="alert"
-          className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-4 text-base font-semibold text-amber-900"
+          className="flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-base font-medium text-amber-900 animate-rise"
         >
-          {error}
+          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
+          <span>{error}</span>
         </div>
       )}
 
       {result && meta && (
-        <div ref={resultRef} className="overflow-hidden rounded-2xl border-2 border-slate-200 bg-white shadow-sm">
-          <div className={`${meta.header} p-5`}>
-            <p className="text-sm font-semibold uppercase tracking-wide opacity-90">
-              {t(lang, "resultTitle")}
-            </p>
-            <p className="mt-1 text-4xl font-extrabold">{result.verdict}</p>
-            <p className="mt-1 text-xl font-bold">{meta.label[primary]}</p>
-            <p className="text-base opacity-90">{meta.label[secondary]}</p>
+        <div
+          ref={resultRef}
+          className="overflow-hidden rounded-3xl border border-slate-900/5 bg-white shadow-[0_20px_60px_-20px_rgba(15,23,42,0.3)] animate-rise"
+        >
+          <div className={`${meta.header} px-5 py-6 text-white`}>
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
+                  {t(lang, "resultTitle")}
+                </p>
+                <p className="mt-2 text-4xl font-extrabold tracking-tight">{result.verdict}</p>
+                <p className="mt-1 text-lg font-semibold">{meta.label[primary]}</p>
+                <p className="text-sm text-white/85">{meta.label[secondary]}</p>
+              </div>
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur">
+                <VerdictIcon verdict={result.verdict} className="h-7 w-7" />
+              </span>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-5 p-5">
-            <p className="text-lg leading-relaxed">
-              {result.explanation[primary]}
-            </p>
-            <p className="text-base leading-relaxed text-slate-500">
-              {result.explanation[secondary]}
-            </p>
+          <div className="flex flex-col gap-6 p-5">
+            <div className="space-y-1">
+              <p className="text-lg leading-relaxed text-slate-800">{result.explanation[primary]}</p>
+              <p className="text-base leading-relaxed text-slate-400">{result.explanation[secondary]}</p>
+            </div>
 
             <div>
-              <h2 className="text-base font-bold text-slate-800">
+              <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-slate-500">
+                <AlertTriangle className="h-4 w-4 text-slate-400" />
                 {t(lang, "flagsTitle")}
               </h2>
               {result.redFlags.length === 0 ? (
-                <p className="mt-1 text-base text-slate-600">
-                  {t(lang, "noFlags")}
-                </p>
+                <p className="mt-2 text-base text-slate-500">{t(lang, "noFlags")}</p>
               ) : (
-                <ul className="mt-2 flex flex-col gap-2">
+                <ul className="mt-3 flex flex-col gap-2">
                   {result.redFlags.map((flag, index) => (
-                    <li
-                      key={index}
-                      className={`rounded-xl px-3 py-2 ${meta.flag}`}
-                    >
+                    <li key={index} className={`rounded-2xl px-4 py-3 ${meta.flag}`}>
                       <p className="text-base font-semibold">{flag[primary]}</p>
-                      <p className="text-sm opacity-80">{flag[secondary]}</p>
+                      <p className="text-sm opacity-70">{flag[secondary]}</p>
                     </li>
                   ))}
                 </ul>
               )}
             </div>
 
-            <div className="rounded-xl border-2 border-slate-900 bg-slate-50 p-4">
-              <h2 className="text-base font-bold text-slate-800">
+            <div className="rounded-2xl border-2 border-slate-900 bg-slate-50 p-4">
+              <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-slate-500">
+                <ShieldCheck className="h-4 w-4 text-slate-400" />
                 {t(lang, "actionTitle")}
               </h2>
-              <p className="mt-1 text-lg font-semibold">{result.action[primary]}</p>
-              <p className="mt-1 text-base text-slate-500">
-                {result.action[secondary]}
-              </p>
+              <p className="mt-2 text-lg font-semibold text-slate-900">{result.action[primary]}</p>
+              <p className="mt-1 text-base text-slate-500">{result.action[secondary]}</p>
             </div>
 
-            <p className="text-sm text-slate-500">{result.certaintyNote[primary]}</p>
+            <p className="text-sm text-slate-400">{result.certaintyNote[primary]}</p>
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <button
                 type="button"
                 onClick={onWarn}
-                className="flex-1 rounded-xl bg-[#25D366] px-5 py-4 text-lg font-extrabold text-white"
+                className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-4 text-lg font-bold text-white shadow-lg shadow-[#25D366]/25 transition hover:brightness-105 active:scale-[0.99]"
               >
+                <WhatsAppIcon className="h-5 w-5" />
                 {t(lang, "warn")}
               </button>
               <button
                 type="button"
                 onClick={onListen}
-                className="flex-1 rounded-xl border-2 border-slate-900 bg-white px-5 py-4 text-lg font-extrabold text-slate-900"
+                aria-pressed={speaking}
+                className="flex flex-1 items-center justify-center gap-2 rounded-2xl border-2 border-slate-900 bg-white px-5 py-4 text-lg font-bold text-slate-900 transition hover:bg-slate-900 hover:text-white active:scale-[0.99]"
               >
-                {speaking ? t(lang, "stop") : t(lang, "listen")}
+                {speaking ? (
+                  <>
+                    <StopIcon className="h-4 w-4" />
+                    {t(lang, "stop")}
+                  </>
+                ) : (
+                  <>
+                    <VolumeIcon className="h-5 w-5" />
+                    {t(lang, "listen")}
+                  </>
+                )}
               </button>
             </div>
           </div>
         </div>
       )}
 
-      <footer className="mt-auto pt-4 text-center text-sm text-slate-500">
+      <footer className="mt-auto flex items-center justify-center gap-1.5 pt-4 text-center text-xs text-slate-400">
+        <LockIcon className="h-3.5 w-3.5" />
         {t(lang, "privacy")}
       </footer>
     </div>
