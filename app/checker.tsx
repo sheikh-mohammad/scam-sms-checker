@@ -9,134 +9,17 @@ import {
   type Verdict,
   type VerdictResult,
 } from "@/lib/types";
+import {
+  AlertTriangle,
+  SearchIcon,
+  ShieldCheck,
+  Spinner,
+  StopIcon,
+  VolumeIcon,
+  WhatsAppIcon,
+} from "@/components/icons";
 
 type Lang = "ur" | "en";
-
-interface IconProps {
-  className?: string;
-}
-
-function ShieldCheck({ className = "h-6 w-6" }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.8}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M12 3l7 3v5.2c0 4.4-2.9 8-7 9.3-4.1-1.3-7-4.9-7-9.3V6l7-3z" />
-      <path d="M9 12l2 2 4-4" />
-    </svg>
-  );
-}
-
-function AlertTriangle({ className = "h-6 w-6" }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.8}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M10.3 4.3 2.6 18a1.6 1.6 0 0 0 1.4 2.4h16a1.6 1.6 0 0 0 1.4-2.4L13.7 4.3a1.6 1.6 0 0 0-2.8 0Z" />
-      <path d="M12 9.5v4" />
-      <path d="M12 17h.01" />
-    </svg>
-  );
-}
-
-function VolumeIcon({ className = "h-6 w-6" }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.8}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M11 5 6 9H3v6h3l5 4V5z" />
-      <path d="M15.5 8.5a5 5 0 0 1 0 7" />
-      <path d="M18.5 5.5a9 9 0 0 1 0 13" />
-    </svg>
-  );
-}
-
-function StopIcon({ className = "h-6 w-6" }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-      aria-hidden="true"
-    >
-      <rect x="6" y="6" width="12" height="12" rx="2.5" />
-    </svg>
-  );
-}
-
-function WhatsAppIcon({ className = "h-6 w-6" }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.98 2.9a9.83 9.83 0 0 1 2.9 6.99c0 5.45-4.44 9.89-9.89 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.54 4.14 1.58 5.95L.05 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41" />
-    </svg>
-  );
-}
-
-function LockIcon({ className = "h-4 w-4" }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.9}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <rect x="4" y="10" width="16" height="10" rx="2.5" />
-      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
-    </svg>
-  );
-}
-
-function SearchIcon({ className = "h-5 w-5" }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <circle cx="11" cy="11" r="7" />
-      <path d="m20 20-3.2-3.2" />
-    </svg>
-  );
-}
-
-function Spinner({ className = "h-5 w-5" }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={`${className} animate-spin`} aria-hidden="true">
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="3" opacity="0.25" />
-      <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 function VerdictIcon({ verdict, className }: { verdict: Verdict; className?: string }) {
   return verdict === "LOOKS SAFE" ? (
@@ -400,21 +283,9 @@ export default function Checker() {
   const meta = result ? VERDICT_META[result.verdict] : null;
 
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-xl flex-col gap-6 px-4 pb-10 pt-6 text-lg text-slate-800">
-      <header className="flex items-start justify-between gap-3">
-        <div className="flex items-start gap-3">
-          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white shadow-lg shadow-emerald-500/20">
-            <ShieldCheck className="h-6 w-6" />
-          </span>
-          <div>
-            <h1 className="text-xl font-extrabold leading-tight tracking-tight text-slate-900">
-              {t(lang, "appName")}
-            </h1>
-            <p className="text-xs font-medium uppercase tracking-[0.14em] text-emerald-700">
-              {t(lang, "eyebrow")}
-            </p>
-          </div>
-        </div>
+    <div className="mx-auto flex w-full max-w-xl flex-col gap-6 px-4 pb-6 pt-8 text-lg text-slate-800">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-base font-medium text-slate-500">{t(lang, "tagline")}</p>
 
         <div
           role="group"
@@ -437,9 +308,7 @@ export default function Checker() {
             </button>
           ))}
         </div>
-      </header>
-
-      <p className="-mt-2 text-base text-slate-500">{t(lang, "tagline")}</p>
+      </div>
 
       <section className="rounded-3xl border border-slate-900/5 bg-white/80 p-4 shadow-[0_10px_40px_-12px_rgba(15,23,42,0.15)] backdrop-blur">
         <label
@@ -587,11 +456,6 @@ export default function Checker() {
           </div>
         </div>
       )}
-
-      <footer className="mt-auto flex items-center justify-center gap-1.5 pt-4 text-center text-xs text-slate-400">
-        <LockIcon className="h-3.5 w-3.5" />
-        {t(lang, "privacy")}
-      </footer>
     </div>
   );
 }
