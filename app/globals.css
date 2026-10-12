@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Nastaliq Urdu",
+    "Jameel Noori Nastaleeq", sans-serif;
+}
+
 :root {
   color-scheme: light;
 }
@@ -9,6 +15,55 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto,
-    "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Urdu Typesetting", sans-serif;
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+}
+
+/* Soft, pleasant page background */
+.app-bg {
+  background-image: radial-gradient(
+      1100px 520px at 50% -8%,
+      #ecfdf5 0%,
+      rgba(236, 253, 245, 0) 60%
+    ),
+    radial-gradient(
+      820px 460px at 100% 0%,
+      #eff6ff 0%,
+      rgba(239, 246, 255, 0) 55%
+    );
+  background-color: #f8fafc;
+}
+
+/* Verdict header gradients */
+.vh-scam {
+  background-image: linear-gradient(135deg, #fb7185 0%, #e11d48 55%, #9f1239 100%);
+}
+
+.vh-probably {
+  background-image: linear-gradient(135deg, #fbbf24 0%, #f97316 60%, #ea580c 100%);
+}
+
+.vh-safe {
+  background-image: linear-gradient(135deg, #34d399 0%, #10b981 55%, #047857 100%);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none;
+  }
 }

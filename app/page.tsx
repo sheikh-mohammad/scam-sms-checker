@@ -2,7 +2,7 @@ import Checker from "./checker";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main className="app-bg min-h-screen">
       <Checker />
     </main>
   );
