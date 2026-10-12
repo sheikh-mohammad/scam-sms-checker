@@ -13,14 +13,24 @@ a real message, and a wrong click can cost them money. This app gives one ordina
 person a fast, plain-language second opinion: paste the message, get a clear verdict
 and the reason, in the language they read.
 
+Around that one tool, the app is also a small, friendly website that teaches families
+how to spot these scams in the first place, explains the rule they can trust (the 8171
+fact), and tells them what to do if they have already been caught. The tool is the
+centre; the pages exist to teach and reassure, never to distract from checking a message.
+
 ## 2. Design principles
 
 1. **Urdu first** — the verdict and red flags are always understandable to someone who
    reads Roman Urdu, regardless of the toggle setting.
 2. **WhatsApp native** — the warning feature hands off to WhatsApp, where the family
    already is, instead of inventing a new sharing channel.
-3. **One screen** — one job, one screen: paste, check, read the answer. No extra pages,
-   no accounts, no dashboards.
+3. **One screen for the tool** — the checker does one job on one screen: paste, check,
+   read the answer. The other pages only teach and reassure, and every one of them leads
+   back to that one job.
+4. **Bilingual by default** — on the teaching pages, Roman Urdu comes first and English
+   follows underneath, so nothing is hidden behind a setting.
+5. **Calm and trustworthy** — a warm, uncluttered look that an older person can read at
+   arm's length, with no dark patterns, no pop-ups, and no pressure.
 
 ## 3. User scenarios
 
@@ -36,6 +46,18 @@ and the reason, in the language they read.
   available).
 - When a user pastes an empty or whitespace-only message and taps Check, they are told
   to paste a message first; no request is sent.
+- When a user opens the site, they can move between the pages (Check, Guide, 8171,
+  Help, About) from a single navigation bar on every page.
+- When a user reads the **Guide**, they see the common scam types explained in plain
+  Roman Urdu and English, with a checklist of warning signs and simple golden rules.
+- When a user reads the **8171** page, they understand that real BISP messages come only
+  from 8171 and that any other number claiming to be BISP is fake.
+- When a user visits **Help** after losing money or sharing a code, they get a short,
+  calm, ordered list of what to do next.
+- When a user visits **About** or **FAQ**, they learn why the site exists, that it stores
+  nothing, and that an AI answer is a second opinion, not a guarantee.
+- When a user opens a link that does not exist, they see a friendly not-found page that
+  leads them back to the checker.
 
 ## 4. Functional requirements
 
@@ -68,6 +90,24 @@ and the reason, in the language they read.
     clear, friendly error and does not crash.
 16. The server can be pointed at different AI providers by configuration alone, without
     changing application code. Exactly one provider is active at a time.
+17. The site has more than one page, reachable from a shared navigation bar that appears
+    on every page: **Check** (the tool), **Guide**, **8171**, **Help**, and **About**.
+18. A shared header and footer frame every page. The header links back to the checker
+    from anywhere; the footer repeats the privacy promise and the honesty disclaimer.
+19. The **Guide** page explains the common Pakistani scam types (fake BISP payments,
+    prize/lottery, bank or wallet code requests, parcel/courier, urgent call/money),
+    each in simple Roman Urdu and English, plus a warning-signs checklist and golden rules.
+20. The **8171** page states the BISP fact in large, plain language, shows an example of
+    the scam, explains what to do, and cites its source.
+21. The **Help** page gives an ordered list of steps to take after money or a code has
+    been lost.
+22. The **About** page explains the purpose, how the tool works at a high level, the
+    privacy promise (no login, nothing stored), and that the AI can be wrong.
+23. The **FAQ** page answers the most common questions in Roman Urdu and English.
+24. A friendly not-found page exists for unknown URLs and links back to the checker.
+25. Every page is mobile-first, uses large readable text, and shares one consistent
+    visual design (same colours, cards, and spacing).
+26. Every page has its own title and description for search engines.
 
 ## 5. Instructions given to the AI model
 
@@ -108,6 +148,9 @@ and the reason, in the language they read.
 - It does **not** verify a message against any official BISP/NADRA/bank database.
 - It does **not** have accounts, teams, or admin panels.
 - It does **not** guarantee that a `LOOKS SAFE` verdict means the message is truly safe.
+- The teaching pages do **not** let users submit, edit, or publish content; they are
+  fixed pages written at build time.
+- It does **not** link to, or claim to be, any government or bank website.
 
 ## 8. Acceptance criteria
 
@@ -128,4 +171,10 @@ and the reason, in the language they read.
 - [ ] Changing a single configuration value switches the active AI provider with no code
       change.
 - [ ] The app is usable on a narrow phone screen with large, readable text.
+- [ ] The shared navigation bar appears on every page and links to Check, Guide, 8171,
+      Help, and About.
+- [ ] The Guide, 8171, Help, About, and FAQ pages all load and show their content in
+      Roman Urdu and English.
+- [ ] An unknown URL shows the friendly not-found page with a link back to the checker.
+- [ ] Every page renders with the same visual design and is usable on a phone.
 - [ ] Lint, type-check, and production build all pass.
