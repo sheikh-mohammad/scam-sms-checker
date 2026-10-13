@@ -22,7 +22,7 @@ const STEPS = [
   {
     title: "Code ya details de chuke hain? Foran block karein.",
     titleEn: "Block it right now",
-    body: "Agar OTP, card number ya PIN de diya hai — turant bank app ya wallet app mein card/wallet block/nafai karein. Phir bank ki official fraud reporting line par call karein.",
+    body: "Agar OTP, card number ya PIN de diya hai — turant bank app ya wallet app mein card/wallet block karein. Phir bank ki official fraud reporting line par call karein.",
   },
   {
     title: "Saboot mehfooz karein",
@@ -134,8 +134,8 @@ export default function HelpPage() {
               </h2>
               <p className="text-base leading-relaxed text-slate-700">
                 OTP ya code sirf usi “request” ke jawab mein aata hai jo aap ne khud
-                shuru ki ho — black mujhe khud bheja ho. Baaki har aaya hua code jhoot
-                hai. Aur kisi bhi message ko pehle check kiye bina forward mat karein.
+                shuru ki ho. Baaki har aaya hua code jhoot hai. Aur kisi bhi message ko
+                pehle check kiye bina forward mat karein.
               </p>
             </Card>
           </div>
@@ -152,8 +152,8 @@ export default function HelpPage() {
 
       <Container>
         <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-slate-400">
-          Yeh page mashwara hai, official guidance nahi. Imdadi aur saza ke liye FIA
-          Cyber Crime aur apne bank se rabta karein.
+          Yeh page mashwara hai, official guidance nahi. Madad aur legal muamle ke liye
+          FIA Cyber Crime aur apne bank se rabta karein.
         </p>
       </Container>
     </div>
